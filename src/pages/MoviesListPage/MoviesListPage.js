@@ -10,7 +10,7 @@ export default function MoviesListPage(props) {
 
   return (
     <main>
-      <h1>MoviesListPage</h1>
+      <h1>All Movies:</h1>
       <div className="all-movies">
         {MovieCardEls}
       </div>
