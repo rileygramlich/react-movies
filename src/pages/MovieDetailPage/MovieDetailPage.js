@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function MovieDetailPage() {
+export default function MovieDetailPage(movie) {
   return (
-    <div>MovieDetailPage</div>
+    <div>MovieDetailPage
+            <li>cast {movie.cast.join(", ")}</li>
+    </div>
   )
 }
