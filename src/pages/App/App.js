@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, useParams } from "react-router-dom";
 import React, { useState } from "react";
 
 import LoginPage from '../LoginPage/LoginPage';
@@ -9,6 +9,8 @@ import ActorListPage from '../ActorListPage/ActorListPage';
 import NavBar from '../../components/NavBar/NavBar';
 
 import { movies } from "../../data/data"
+
+
 
 
 function App() {
@@ -22,7 +24,7 @@ function App() {
           <NavBar/>
           <Routes>
             <Route path="/" element={<MoviesListPage movies={ movies } />} />
-            <Route path="/movies/:movieName" element={<MovieDetailPage />} />
+            <Route path="/movies/:movieName" element={<MovieDetailPage movies={ movies }/>} />
             <Route path="/actors" element={<ActorListPage />} />
           </Routes>
         </>

@@ -6,7 +6,7 @@ export default function MovieCard(props) {
   console.log(movie.posterPath)
   return (
     <div className="MovieCard">
-      <a href="#" className="movie-link">
+      <a href={'/movies/' + movie.title} className="movie-link">
         <div className="card" style={{background: `url(${movie.posterPath})`}}>
           <h2 className="movie-title">{movie.title}</h2>
           <h3 className="movie-release">Released: {movie.releaseDate}</h3>
