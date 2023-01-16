@@ -1,10 +1,19 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Ubuntu', 'Segoe UI', 'Roboto', 'Oxygen', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: bisque;
+  animation: change-background 20s linear infinite;
+}
+
+@keyframes change-background {
+  0% {background-color: bisque;}
+  20% {background-color: rgb(125, 129, 83);}
+  40% {background-color: rgb(106, 89, 149);}
+  60% {background-color: rgb(161, 96, 135);}
+  80% {background-color: rgb(158, 78, 43);}
+  100% {background-color: rgb(32, 155, 155);}
 }
 
 code {
@@ -38,4 +47,40 @@ code {
 
 a {
   text-decoration: none;
+}
+
+.NavBar {
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+}
+
+.NavBar > a {
+  border: 2px solid lightgoldenrodyellow;
+  border-radius: 5px;
+  background-color: lightgoldenrodyellow;
+  color: black;
+  font-size: 40px;
+}
+
+.all-actors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ActorCard {
+  height: 100px;
+  width: 150px;
+  border: 3px solid black;
+  margin: 5px;
+  background-color: azure;
+  font-size: 20px;
+}
+
+.ActorCard:hover {
+  background: black;
+  color: azure;
+  cursor: pointer;
+  border-radius: 15px;
 }

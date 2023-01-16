@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function ActorCard() {
+export default function ActorCard({ actor }) {
   return (
-    <div className='ActorCard'>ActorCard</div>
+    <div className='ActorCard'>{actor}</div>
   )
 }
